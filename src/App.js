@@ -1,16 +1,15 @@
-import { useState, createContext, useContext } from "react";
 import TaskForm from "./components/TaskForm.jsx";
 import TaskList from "./components/TaskList.jsx";
-import { TaskContext, TaskProvider } from "./context/TaskContext.jsx";
+import { TaskProvider } from "./context/TaskContext.jsx";
+import "./App.css";
 
 function App() {
   return (
     <TaskProvider>
-      <div>
-        <h1>Ma Todo List</h1>
+      <main>
         <TaskList />
         <TaskForm />
-      </div>
+      </main>
     </TaskProvider>
   );
 }

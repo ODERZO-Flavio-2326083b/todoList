@@ -1,23 +1,27 @@
 import { useContext } from "react"
 import { TaskContext } from "../context/TaskContext"
 
-function TaskItem(task) {
+const TaskItem = ({ task }) => {
     return (
-        <div>
-            <h3>{task.title}</h3>
-            <p>À faire avant le : {task.date_echeance}</p>
-        </div>
-    )
-}
+    <div className={`task-card ${task.urgent ? "urgent" : ""}`}>
+        <h3 className="task-title">{task.title}</h3>
+        {task.description && <p className="task-desc">{task.description}</p>}
+        <p className="task-date">Créé le : {task.date_creation}</p>
+        <p className="task-date">Échéance : {task.date_echeance}</p>
+        <span className={`task-status ${task.etat.toLowerCase().replace(" ", "-")}`}>
+            {task.etat}
+        </span>
+    </div>
+    );
+};
 
 function TaskList() {
     const { tasks } = useContext(TaskContext);
-
     return (
         <div>
-        {tasks.map((task) => (
-            TaskItem(task)
-        ))}
+            {tasks.map((task) => (
+                <TaskItem task={task}/>
+            ))}
         </div>
     )
 }
