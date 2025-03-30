@@ -1,0 +1,150 @@
+.task-remove-btn {
+    background-color: #ff4d4d;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.2s;
+    margin-top: 10px;
+    display: block;
+}
+
+.task-remove-btn:hover {
+    background-color: #cc0000;
+    transform: scale(1.05);
+}
+
+.task-remove-btn:active {
+    transform: scale(0.95);
+}
+
+.task-status-select {
+    margin-top: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    background-color: white;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.task-status-select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.task-urgent-label {
+    position: absolute;
+    top: 70px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    font-size: 0.9em;
+    cursor: pointer;
+    background: white;
+    padding: 5px 8px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.task-urgent-label input {
+    margin-left: 5px;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.task-card.urgent {
+    border-color: red;
+    background-color: #ffe5e5;
+}
+
+.task-title {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.task-desc {
+    color: #666;
+    font-size: 0.9em;
+}
+
+.task-date {
+    font-size: 0.8em;
+    color: #888;
+}
+
+.task-status {
+    display: inline-block;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 0.8em;
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.task-status.nouveau {
+    background-color: #d0e8ff;
+    color: #007bff;
+}
+
+.task-status.en-cours {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.task-status.reussi {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.task-status.en-attente {
+    background-color: #e2e3e5;
+    color: #6c757d;
+}
+
+.task-status.abandonne {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.task-card {
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 10px 0;
+    background-color: #f9f9f9;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.category-select {
+    background: white;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 5px;
+    font-size: 0.9em;
+    cursor: pointer;
+}
+
+.category-select:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.task-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+}
